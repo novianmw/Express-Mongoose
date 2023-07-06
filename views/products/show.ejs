@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Detail Product</title>
+</head>
+<body>
+    <h1 class=""><%= product.name %></h1>
+    <ul>
+        <li>Brand :<%= product.brand %></li>
+        <li>Harga :<%= product.price %></li>
+        <li>
+            Categori : <a href="/products?category=<%= product.category %>">
+                <%= product.category %></a>
+        </li>
+    </ul>
+    <a href="/products">All Product</a>
+    <a href="/products/<%= product._id %>/edit">Edit Product</a>
+    <form action="/products/<%= product._id %>?_method=delete" method="post">
+        <button type="submit">Delete Product</button>
+    </form>
+</body>
+</html>
