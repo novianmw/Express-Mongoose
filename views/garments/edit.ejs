@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Garment</title>
+</head>
+<body>
+    <h1 class="">Edit Garment</h1>
+    <form action="/garments/<%= garment._id %>?_method=put" method="post">
+        <label for="name">Name Garment</label>
+        <input type="text" name="name" id="name" value="<%= garment.name  %>" >
+        <br>
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" value="<%= garment.location  %>" >
+        <br>
+        <label for="contact">Contact Number</label>
+        <input type="number" name="contact" id="contact" value="<%= garment.contact  %>" >
+        <br>
+        
+        <button type="submit">Edit Garment</button>
+        <a href="/Garments">kembali</a>
+    </form>
+</body>
+</html>
