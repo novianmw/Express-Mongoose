@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Detail Garment</title>
+</head>
+<body>
+    <h1 class=""><%= garment.name %></h1>
+    <ul>
+        <li>Location :<%= garment.location %></li>
+        <li>Contact :<%= garment.contact %></li>
+    </ul>
+    <h2>Products</h2>
+    <ul>
+        <% for(let product of garment.products) { %>
+            <li><a href="/products/<%= product._id %>"><%= product.name %> - <%= product.brand %></a></li>
+        <% } %>
+    </ul>
+    <a href="/garments">All Garments</a>
+    <a href="/garments/<%= garment._id %>/edit">Edit Garment</a>
+    <form action="/garments/<%= garment._id %>?_method=delete" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/garments/<%= garment._id %>/products/create">Add Product</a>
+</body>
+</html>
