@@ -15,6 +15,12 @@
                 <%= product.category %></a>
         </li>
     </ul>
+    <h2>Garment Detail</h2>
+    <ul>
+        <li>
+            <a href="/garments/<%= product.garment._id %>"><%= product.garment.name %></a>
+        </li>
+    </ul>
     <a href="/products">All Product</a>
     <a href="/products/<%= product._id %>/edit">Edit Product</a>
     <form action="/products/<%= product._id %>?_method=delete" method="post">
