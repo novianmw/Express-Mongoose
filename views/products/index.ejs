@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1><%= category %> products</h1>
-    <% if(category) { %>
+    <% if(category !== 'All') { %>
         <a href="/products">All Products</a>
     <% } %>
     <ul>
@@ -19,6 +19,6 @@
         </li>
         <% } %>
     </ul>
-    <a href="/products/create">add new product</a>
+    <!-- <a href="/products/create">add new product</a> -->
 </body>
 </html>
