@@ -16,6 +16,10 @@ const productSchema = new mongoose.Schema({
     category: {
         type: String,
         enum: ['Baju', 'Celana', 'Topi', 'Jaket', 'Aksesoris'],
+    },
+    garment: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Garment'
     }
 })
 
